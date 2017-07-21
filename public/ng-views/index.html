@@ -1,58 +1,62 @@
-<input ng-model="vm.addContact" type="radio" name="addContact" ng-value="1" checked>List
-<input ng-model="vm.addContact" type="radio" name="addContact" ng-value="2">Search
-<input ng-model="vm.addContact" type="radio" name="addContact" ng-value="3" >Add Contact
+<input ng-model="vm.activity" type="radio" name="activity" ng-value="1" checked>List
+<input ng-model="vm.activity" type="radio" name="activity" ng-value="2">Search
+<input ng-model="vm.activity" type="radio" name="activity" ng-value="3" >Add Contact
 
-<div ng-show="vm.addContact==1" class="container" ng-repeat="contact in vm.contacts">
-  <div class="btn-group">
-    <div>
+<div ng-show="vm.activity==1">
+  <button type="button" ng-click="vm.filterCarHomeInsurance()">Car | Home | Insurance</button>
+  <button type="button" ng-click="vm.filterHealth()"> Health </button>
+  <button type="button" ng-click="vm.filterDevlopers()">Devloper</button>
+  <button type="button" ng-click="vm.filterEngineers()">Engineers</button>
+  <button type="button" ng-click="vm.filterMarketingManagment()">Marketing | Managment</button>
+  <button type="button" ng-click="vm.filterUniversitiesCollegesBootcamp()">Universities | Colleges | Boot-camp</button>
+  <button type="button" ng-click="vm.other()">Other</button>
+  <div  class="container" ng-repeat="contact in vm.contacts | filter: vm.filterCriteria">
+    <div class="btn-group">
       <a class="btn btn-primary" data-ui-sref = "show({name: contact.name})">
       {{$index+1}}.  {{contact.name}}
       </a>
     </div>
   </div>
 </div>
-<div ng-show="vm.addContact==2">
-  <input type="text" ng-model="vm.searchCriteria">
+<div ng-show="vm.activity==2">
+  <input id="form" type="text" placeholder="Serach by keyword"ng-model="vm.searchCriteria">
   <div  class="container" ng-repeat="contact in vm.contacts | filter: vm.searchCriteria">
     <div class="btn-group">
-      <div>
-        <a class="btn btn-primary" data-ui-sref = "show({name: contact.name})">
+      <a class="btn btn-primary" data-ui-sref = "show({name: contact.name})">
         {{$index+1}}.  {{contact.name}}
-        </a>
-      </div>
+      </a>
     </div>
   </div>
-
 </div>
-
-<div ng-show="vm.addContact==3">
+<div ng-show="vm.activity==3">
   <form ng-submit="vm.create()">
-    <div> <input ng-model="vm.newContact.name" type="text" placeholder="Name"/> </div>
-    <div> <input ng-model="vm.newContact.rating" type="range" min="0" max="10" placeholder="Rating"/> </div>
-    <div> <input ng-model="vm.newContact.comment" type="text" placeholder="Comment"/> </div>
+    <div>
+      <select ng-model="vm.newContact.catagory">
+        <option value="Car | Home | Insurance"> Car | Home | Insurance</option>
+        <option value="Health"> Health</option>
+        <option value="Devlopers"> Devlopers</option>
+        <option value="Engineers"> Engineers</option>
+        <option value="Marketing | Managment"> Marketing | Managment</option>
+        <option value="Universities | Colleges | Boot-camp"> Universities | Colleges | Boot-camp</option>
+        <option value="Universities | Colleges | Boot-camp"> Other</option>
+      </select>
+    </div>
+    <details >
+      <summary> Manually </summary>
+      <div> <input id="form" ng-model="vm.newContact.name" type="text" placeholder="Name"/> </div>
+      <div> <input id="form" ng-model="vm.newContact.email" type="email" placeholder="Email"/> </div>
+      <div> <input id="form" ng-model="vm.newContact.phone" type="tel" placeholder="Phone"/> </div>
+      <div> <input id="form" ng-model="vm.newContact.location" type="text" placeholder="Location"/> </div>
+      <div> <input id="form" ng-model="vm.newContact.rating" type="range" min="0" max="10" placeholder="Rating"/> </div>
+      <div> <input id="form" ng-model="vm.newContact.comment" type="text" placeholder="Comment"/> </div>
+    </details>
     <details >
       <summary> Using URL </summary>
-      <input ng-model="vm.newContact.url" type="text" placeholder="URL"/>
+      <!-- <input id="form" ng-model="vm.newContact.url" type="text" placeholder="URL"/> -->
     </details>
     <details >
       <summary> Using Image </summary>
-       <!-- <input ng-model="vm.newContact.img" type="file" placeholder="Business Card image"/> -->
-    </details>
-    <details >
-      <summary> Manually </summary>
-      <div>
-        <select name="catagory">
-          <option value="Car | Home | Insurance"> Car | Home | Insurance</option>
-          <option value="Health">Health</option>
-          <option value="Devlopers">Devlopers</option>
-          <option value="Engineers">Engineers</option>
-          <option value="Marketing | Managment">Marketing | Managment</option>
-          <option value="Universities | Colleges | Boot-camp">Universities | Colleges | Boot-camp</option>
-        </select>
-      </div>
-      <div> <input ng-model="vm.newContact.email" type="email" placeholder="Email"/> </div>
-      <div> <input ng-model="vm.newContact.phone" type="tel" placeholder="Phone"/> </div>
-      <div> <input ng-model="vm.newContact.location" type="text" placeholder="Location"/> </div>
+       <!-- <input id="form" ng-model="vm.newContact.img" type="file" placeholder="Business Card image"/> -->
     </details>
     <button type="submit">Create</button>
   </form>

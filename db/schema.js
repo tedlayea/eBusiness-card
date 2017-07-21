@@ -5,18 +5,14 @@ var Schema = require("./connection.js")
 var Schema = mongoose.Schema
 
 var PersonSchema = new Schema ({
-  catagory:String,
-  name:{
+  catagory:{
     type:String,
     required: true
   },
-  email:{
-    type:String,
-    unique: true
-  },
+  name:String,
+  email:String,
   phone:{
     type:String,
-    unique: true,
     validate:[
       function(phone){
         return phone.length==10;

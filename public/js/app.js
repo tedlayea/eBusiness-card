@@ -16,9 +16,6 @@ angular
 
 function GeneralControllerFunction(){
   console.log("GeneralController started" );
- this.searchFunction = function(){
-   console.log("clicked");
- }
 }
 function IndexControllerFunction(Factory,$state){
   console.log("Index controller started");
@@ -28,11 +25,33 @@ function IndexControllerFunction(Factory,$state){
  this.create = function(){
    console.log(this.newContact);
    this.newContact.$save().then(function(contact){
+     console.log("created");
      $state.go("show", {name: contact.name})
    }).catch(err=>{
      console.log(err);
    }
    )
+ }
+ this.filterCarHomeInsurance = function(){
+    this.filterCriteria = "Car | Home | Insurance"
+ }
+ this.filterHealth = function(){
+    this.filterCriteria = "Health"
+ }
+ this.filterDevlopers = function(){
+    this.filterCriteria = "Devloper"
+ }
+ this.filterEngineers = function(){
+    this.filterCriteria = "Engineers"
+ }
+ this.filterMarketingManagment = function(){
+    this.filterCriteria = "Marketing | Managment"
+ }
+ this.filterUniversitiesCollegesBootcamp = function(){
+    this.filterCriteria = "Universities | Colleges | Boot-camp'"
+ }
+ this.filterdevlopers = function(){
+    this.filterCriteria = "Other'"
  }
 }
 function ShowControllerFunction(Factory, $state, $stateParams){

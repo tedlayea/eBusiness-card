@@ -2,17 +2,25 @@
   <p>This detail is not available!!!</p>
 </div>
 <div ng-if="vm.contact">
-  <div> Catagory: <input ng-model="vm.contact.catagory" type="text" value="{{vm.contact.catagory}}"/> </div>
+  <div> Catagory: {{vm.contact.catagory}} </div>
+  <div> Name: {{vm.contact.name}}</div>
+  <div> Email:{{vm.contact.email}}</div>
+  <div> Phone: {{vm.contact.phone}} </div>
+  <div> Location: {{vm.contact.location}}/> </div>
+  <div> Rating:{{vm.contact.rating}} </div>
+  <div> Comment: {{vm.contact.comment}} </div>
+  <div> URL: {{vm.contact.url}}</div>
+  <!-- <div> Catagory: <input ng-model="vm.contact.catagory" type="text" value="{{vm.contact.catagory}}"/> </div>
   <div> Name: <input ng-model="vm.contact.name" type="text" value="{{vm.contact.name}}"/> </div>
   <div> Email: <input ng-model="vm.contact.email" type="email" value="{{vm.contact.email}}"/> </div>
   <div> Phone: <input ng-model="vm.contact.phone" type="tel" value="{{vm.contact.phone}}"/> </div>
   <div> Location: <input ng-model="vm.contact.location" type="text" value="{{vm.contact.location}}"/> </div>
   <div> Rating: <input ng-model="vm.contact.rating" type="raange" value="{{vm.contact.rating}}"/> </div>
   <div> Comment: <input ng-model="vm.contact.comment" type="text" value="{{vm.contact.comment}}"/> </div>
-  <div> URL: <input ng-model="vm.contact.url" type="text" value="{{vm.contact.url}}"/>
+  <div> URL: <input ng-model="vm.contact.url" type="text" value="{{vm.contact.url}}"/> -->
   <!-- <div> Business Card Image: <input ng-model="vm.contact.img" type="file" /> -->
     <!-- {{vm.contact.img}} -->
-  <div><button ng-click="vm.update()">Edit</button>
+  <!-- <div><button ng-click="vm.update()">Edit</button>
       <button ng-click="vm.destroy()">Delete</button>
-  </div>
+  </div> -->
 </div>

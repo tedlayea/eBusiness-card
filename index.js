@@ -107,12 +107,13 @@ app.get("/signout", function(req, res){
 app.get('/',(req,res)=>{
   res.render("home.hbs")
 })
-app.get('/contact',(req,res)=>{
-  res.render("contact.hbs",{news: "GA graduation was awesome!!!"})
-})
 app.get('/about',(req,res)=>{
-  res.render("about.hbs")
+  res.render("emergency.hbs")
 })
+app.get('/news',(req,res)=>{
+  res.render("news.hbs",{news: "GA graduation is on Friday!!!"})
+})
+
 
 //Backend Routes
 app.get('/backend', contactsController.index)
