@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> eBusiness-card </title>
+    <base href="/" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-resource.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+    <script src="/assets/js/app.js"></script>
+  </head>
+  <body ng-controller = "GeneralController as vm">
+    <nav class="navbar navbar-inverse">
+     <div class="container-fluid">
+       <div class="navbar-header">
+         <a class="navbar-brand" href="/">eBusiness-card</a>
+       </div>
+       <ul class="nav navbar-nav">
+         <li><a href="/about">About</a></li>
+         <li><a href="/contact">Contact</a></li>
+       </ul>
+       <form class="navbar-form navbar-left">
+         <div class="form-group">
+           <input type="text" class="form-control" placeholder="Search" ng-model="vm.search">
+         </div>
+         <button class="btn btn-default" ng-click="vm.searchFunction()">Submit</button>
+       </form>
+     </div>
+    </nav>
+    <main>{{{body}}} </main>
+  </body>
+</html>
