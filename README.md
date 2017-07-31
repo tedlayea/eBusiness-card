@@ -43,6 +43,6 @@ Future plan:
 3. To add features to use bar codes to store business card.
 
 Screen shots
-* You can get the screen shots of the app under screen shot folder.
+* You can get the screen shots of the app under screen_shots folder.
 
 ![alt text](screen_shots/Screenshot-5.png)  ![alt text](screen_shots/Screenshot-7.png)
