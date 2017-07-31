@@ -44,4 +44,4 @@ Future plan:
 
 Screen shots
 * You can get the screen shots of the app under screen shot folder.
-* ![Alt text](https://github.com/tedlayea/eBusiness-card/tree/master/screen_shots/ebusinesscard.gif)
+* ![alt text](screen_shots/screenshots-7.png)
