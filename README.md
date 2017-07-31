@@ -44,6 +44,5 @@ Future plan:
 
 Screen shots
 * You can get the screen shots of the app under screen shot folder.
-![alt text](screen_shots/screenshots-5.png)
-![alt text](screen_shots/screenshots-7.png)
-![alt text](screen_shots/screenshots-10.png)
+![alt text](screen_shots/Screenshot-5.png)
+![alt text](screen_shots/Screenshot-7.png)
