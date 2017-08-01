@@ -18,7 +18,7 @@ Dependencies required:
   3. passport: to import and use user authentication module
   4. passport-twitter: to import and use twitter authentication module
   5. fs: to import module required to store images into the database
-  5. cookie-parser: to import and use cookies from server
+  5. cookie-parser: to import and use cookies from the server
   6. express-session: to import module required to store flash and cookies
   7. connect-flash: to show success and error messages
 
