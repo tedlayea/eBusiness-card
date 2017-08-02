@@ -43,6 +43,7 @@ Future plan:
 3. To add features to use bar codes to store business card.
 
 The app is deployed using Heroku and can be found: https://e-business-card.herokuapp.com 
+
 Screen shots
 * You can get the screen shots of the app under screen_shots folder.
 
